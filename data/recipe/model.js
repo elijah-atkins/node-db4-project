@@ -52,8 +52,13 @@ function getRecipes(id) {
   }
 
   function getShoppingList(id){
-
+    return db("ingredients as i")
+        .join('shopping_list as sl', 'sl.ingredient_id', 'i.id')
+        .select('sl.quantity', 'i.ingredient')
+        .where({recipe_id: id})
   }
   function getInstructions(id){
-      
+    return db("instruction_list as i")
+        .join('recipes as r', 'r.id', 'i.recipe_id')
+        .select('i.step_no', 'i.instruction')
   }

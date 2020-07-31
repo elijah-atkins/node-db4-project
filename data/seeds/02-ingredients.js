@@ -4,6 +4,7 @@ exports.seed = function (knex) {
     { ingredient: "cup bottled steak sauce" },
     { ingredient: "cup bourbon whiskey" },
     { ingredient: "tablespoon honey" },
+    { ingredient: "teaspoons prepared mustard" },
     { ingredient: "beef rib, round, or chuck steaks (10 ounces each)"},
     { ingredient: "pork shoulder roast" },
     { ingredient: "large onion; halved length-wise and thinely sliced"},
