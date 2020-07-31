@@ -21,6 +21,15 @@ router.get("/:id/shopping_list", async (req, res, next) => {
   }
 });
 
+router.get("/:id/instructions", async (req, res, next) => {
+  try {
+    const allRecipes = await db.getInstructions(req.params.id);
+    res.json(allRecipes);
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.get("/:id", (req, res) => {
   res.json(req.Recipes);
 });

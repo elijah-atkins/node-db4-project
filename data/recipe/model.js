@@ -61,4 +61,5 @@ function getRecipes(id) {
     return db("instruction_list as i")
         .join('recipes as r', 'r.id', 'i.recipe_id')
         .select('i.step_no', 'i.instruction')
+        .where({recipe_id: id})
   }
